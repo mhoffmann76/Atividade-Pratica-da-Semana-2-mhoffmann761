@@ -30,7 +30,7 @@ select_animais.addEventListener("input", () => {
       container.appendChild(dogs);
 
       linha.addEventListener("mouseover", (e) => {
-        nome.innerText = e.target.id;
+        nome.innerHTML = e.target.id;
       });
     });
   } else {
@@ -41,13 +41,14 @@ select_animais.addEventListener("input", () => {
       container.appendChild(gats);
 
       linha.addEventListener("mouseover", (e) => {
-        nome.innerText = e.target.id;
+        nome.innerHTML = e.target.id;
       });
     });
   }
 });
 
 container.addEventListener("mouseout", () => {
+  p = document.querySelector("p");
   p.innerText = "";
 });
 
