@@ -25,12 +25,12 @@ select_animais.addEventListener("input", () => {
       let dogs = document.createElement("img");
 
       dogs.src = c.imagem;
-
       dogs.id = c.nome;
+
       container.appendChild(dogs);
 
-      linha.addEventListener("mouseover", () => {
-        nome.innerHTML = e.target.id;
+      linha.addEventListener("mouseover", (e) => {
+        nome.innerText = e.target.id;
       });
     });
   } else {
@@ -41,16 +41,14 @@ select_animais.addEventListener("input", () => {
       container.appendChild(gats);
 
       linha.addEventListener("mouseover", (e) => {
-        nome.innerHTML = e.target.id;
+        nome.innerText = e.target.id;
       });
     });
   }
 });
 
 container.addEventListener("mouseout", () => {
-  p = document.querySelector("#nome");
   p.innerText = "";
-  console.log("");
 });
 
 function limparDivContainer() {
